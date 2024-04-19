@@ -23,7 +23,7 @@ introduce any unintentional changes without being aware of them.
 | rpc-core/debug                     | moonbeam-rpc-core-debug        | ${moonbeam}/client/rpc-core/debug             |
 | rpc-core/trace                     | moonbeam-rpc-core-trace        | ${moonbeam}/client/rpc-core/trace             |
 | rpc-core/txpool                    | moonbeam-rpc-core-txpool       | ${moonbeam}/client/rpc-core/txpool            |
-| runtime/evm-tracer                 | moonbeam-evm-tracer            | ${moonbeam}/runtime/evm-tracer                |
+| runtime/evm_tracer                 | moonbeam-evm-tracer            | ${moonbeam}/runtime/evm_tracer                |
 | runtime/ext                        | moonbeam-primitives-ext        | ${moonbeam}/primitives/ext                    |
 | primitives/evm-tracing-events      | evm-tracing-events             | ${moonbeam}/primitives/rpc/evm-tracing-events |
 | primitives/debug                   | moonbeam-rpc-primitives-debug  | ${moonbeam}/primitives/rpc/debug              |
