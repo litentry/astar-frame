@@ -1,10 +1,18 @@
 [workspace]
 members = [
 	"vendor/evm-tracing",
+	"vendor/primitives/debug",
+	"vendor/primitives/evm-tracing-events",
+	"vendor/primitives/txpool",
 	"vendor/rpc/debug",
 	"vendor/rpc/trace",
 	"vendor/rpc/txpool",
+	"vendor/rpc-core/debug",
+	"vendor/rpc-core/trace",
+	"vendor/rpc-core/txpool",
+	"vendor/rpc-core/types",
 	"vendor/runtime/evm-tracer",
+	"vendor/runtime/ext",
 ]
 
 [workspace.package]
