@@ -76,7 +76,6 @@ frame-support = { git = "https://github.com/paritytech/polkadot-sdk", tag = "pol
 frame-system = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0", default-features = false }
 sp-core = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0", default-features = false }
 sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0", default-features = false }
-sp-std = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0", default-features = false }
 sp-arithmetic = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0", default-features = false }
 sp-staking = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0", default-features = false }
 sp-runtime-interface = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0", default-features = false }
@@ -97,6 +96,7 @@ sc-network = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkad
 sc-utils = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0" }
 sp-block-builder = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0" }
 sp-transaction-pool = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0" }
+substrate-prometheus-endpoint = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.9.0" }
 
 # Substrate pallets
 # (wasm)
