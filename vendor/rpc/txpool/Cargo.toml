@@ -15,7 +15,7 @@ sha3 = { workspace = true }
 
 # Moonbeam
 moonbeam-rpc-core-txpool = { workspace = true }
-moonbeam-rpc-primitives-txpool = { workspace = true, features = [ "std" ] }
+moonbeam-rpc-primitives-txpool = { workspace = true }
 
 # Substrate
 frame-system = { workspace = true }
