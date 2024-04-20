@@ -21,32 +21,34 @@
 
 pub use ethereum::{TransactionV0 as LegacyTransaction, TransactionV2 as Transaction};
 use parity_scale_codec::{Decode, Encode};
+use sp_runtime::scale_info::TypeInfo;
 use sp_runtime::traits::Block as BlockT;
+use sp_runtime::RuntimeDebug;
 use sp_std::vec::Vec;
 
-#[derive(Eq, PartialEq, Clone, Encode, Decode, sp_runtime::RuntimeDebug)]
+#[derive(Eq, PartialEq, Clone, Encode, Decode, RuntimeDebug, TypeInfo)]
 pub struct TxPoolResponseLegacy {
-    pub ready: Vec<LegacyTransaction>,
-    pub future: Vec<LegacyTransaction>,
+	pub ready: Vec<LegacyTransaction>,
+	pub future: Vec<LegacyTransaction>,
 }
 
-#[derive(Eq, PartialEq, Clone, Encode, Decode, sp_runtime::RuntimeDebug)]
+#[derive(Eq, PartialEq, Clone, Encode, Decode, RuntimeDebug, TypeInfo)]
 pub struct TxPoolResponse {
-    pub ready: Vec<Transaction>,
-    pub future: Vec<Transaction>,
+	pub ready: Vec<Transaction>,
+	pub future: Vec<Transaction>,
 }
 
 sp_api::decl_runtime_apis! {
-    #[api_version(2)]
-    pub trait TxPoolRuntimeApi {
-        #[changed_in(2)]
-        fn extrinsic_filter(
-            xt_ready: Vec<<Block as BlockT>::Extrinsic>,
-            xt_future: Vec<<Block as BlockT>::Extrinsic>,
-        ) -> TxPoolResponseLegacy;
-        fn extrinsic_filter(
-            xt_ready: Vec<<Block as BlockT>::Extrinsic>,
-            xt_future: Vec<<Block as BlockT>::Extrinsic>,
-        ) -> TxPoolResponse;
-    }
+	#[api_version(2)]
+	pub trait TxPoolRuntimeApi {
+		#[changed_in(2)]
+		fn extrinsic_filter(
+			xt_ready: Vec<<Block as BlockT>::Extrinsic>,
+			xt_future: Vec<<Block as BlockT>::Extrinsic>,
+		) -> TxPoolResponseLegacy;
+		fn extrinsic_filter(
+			xt_ready: Vec<<Block as BlockT>::Extrinsic>,
+			xt_future: Vec<<Block as BlockT>::Extrinsic>,
+		) -> TxPoolResponse;
+	}
 }
