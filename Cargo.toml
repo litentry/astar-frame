@@ -4,7 +4,7 @@ members = [
 	"vendor/rpc/debug",
 	"vendor/rpc/trace",
 	"vendor/rpc/txpool",
-	"vendor/runtime/evm_tracer",
+	"vendor/runtime/evm-tracer",
 ]
 
 [workspace.package]
@@ -52,6 +52,7 @@ jsonrpsee = { version = "0.16.2", default-features = false }
 # Substrate
 # (wasm)
 frame-system = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.3.0", default-features = false }
+frame-support = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.3.0", default-features = false }
 sp-core = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.3.0", default-features = false }
 sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.3.0", default-features = false }
 sp-std = { git = "https://github.com/paritytech/polkadot-sdk", tag = "polkadot-v1.3.0", default-features = false }
@@ -78,9 +79,9 @@ fp-evm = { git = "https://github.com/polkadot-evm/frontier", branch = "polkadot-
 pallet-evm = { git = "https://github.com/polkadot-evm/frontier", branch = "polkadot-v1.3.0", default-features = false, features = ["forbid-evm-reentrancy"] }
 
 # (native)
-fp-rpc = { git = "https://github.com/polkadot-evm/frontier", branch = "polkadot-v1.3.0" }
+fp-rpc = { git = "https://github.com/polkadot-evm/frontier", branch = "polkadot-v1.3.0", default-features = false }
 fc-rpc-core = { git = "https://github.com/polkadot-evm/frontier", branch = "polkadot-v1.3.0" }
-fc-rpc = { git = "https://github.com/polkadot-evm/frontier", branch = "polkadot-v1.3.0" }
+fc-rpc = { git = "https://github.com/polkadot-evm/frontier", branch = "polkadot-v1.3.0", features = ["rpc-binary-search-estimate", "txpool"] }
 fc-consensus = { git = "https://github.com/polkadot-evm/frontier", branch = "polkadot-v1.3.0" }
 fc-db = { git = "https://github.com/polkadot-evm/frontier", branch = "polkadot-v1.3.0" }
 fc-api = { git = "https://github.com/polkadot-evm/frontier", branch = "polkadot-v1.3.0" }
@@ -92,6 +93,7 @@ evm-tracing-events = { path = "./vendor/primitives/evm-tracing-events", default-
 moonbeam-primitives-ext = { path = "./vendor/runtime/ext", default-features = false }
 
 # (native)
+moonbeam-evm-tracer = { path = "./vendor/runtime/evm-tracer", default-features = false }
 moonbeam-rpc-primitives-txpool = { path = "./vendor/primitives/txpool", default-features = false }
 moonbeam-rpc-primitives-debug = { path = "./vendor/primitives/debug", default-features = false }
 moonbeam-client-evm-tracing = { path = "./vendor/evm-tracing" }

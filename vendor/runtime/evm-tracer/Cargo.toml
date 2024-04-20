@@ -26,7 +26,7 @@ evm = { workspace = true }
 evm-gasometer = { workspace = true }
 evm-runtime = { workspace = true }
 fp-evm = { workspace = true }
-pallet-evm = { workspace = true, features = [ "forbid-evm-reentrancy" ] }
+pallet-evm = { workspace = true }
 
 [features]
 default = [ "std" ]

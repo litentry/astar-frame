@@ -29,7 +29,7 @@ moonbeam-rpc-primitives-debug = { workspace = true }
 sc-client-api = { workspace = true }
 sc-network = { workspace = true }
 sc-utils = { workspace = true }
-sp-api = { workspace = true }
+sp-api = { workspace = true, features = ["std"] }
 sp-block-builder = { workspace = true }
 sp-blockchain = { workspace = true }
 sp-io = { workspace = true }
@@ -42,4 +42,4 @@ fc-consensus = { workspace = true }
 fc-rpc = { workspace = true, features = [ "rpc-binary-search-estimate" ] }
 fc-rpc-core = { workspace = true }
 fc-storage = { workspace = true }
-fp-rpc = { workspace = true }
+fp-rpc = { workspace = true, features = [ "std" ] }
